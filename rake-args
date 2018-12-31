@@ -1,0 +1,13 @@
+desc "hello task"
+task :hello, [:name, :job] => [:task1, :task2]
+
+
+task :task1, [:name, :job] do |task, args|
+  puts "DEBUG: #{task}, #{args}"
+  puts "task1 message #{args[:name]}, #{args[:job]}"
+end
+
+task :task2, [:name, :job] do |task, args|
+  puts "DEBUG: #{task}, #{args}"
+  puts "task2 message #{args[:name]}, #{args[:job]}"
+end
