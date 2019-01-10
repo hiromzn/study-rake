@@ -7,3 +7,9 @@ rake -f rake-chain hello
 
 rake -f rake-args 'hello[hiro, student]'
 
+rake -f rake-rule foo.txt
+ls -l foo.txt
+rake -f rake-rule foo.txt
+ls -l foo.txt
+rm foo.txt
+

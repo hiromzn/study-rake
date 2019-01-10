@@ -1,0 +1,6 @@
+puts "I am rake-rule"
+
+rule /.*\.txt/ do |t|
+  puts "create #{t.name}"
+  open( "#{t.name}", "w"){|f| f << "test data." }
+end
